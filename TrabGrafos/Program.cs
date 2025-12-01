@@ -10,6 +10,7 @@ namespace TrabGrafos{
             int graphSize = int.Parse(Console.ReadLine());
             Graph grafos = new Graph(graphSize);
             int option = 99;
+            int minorOption = 99;
             do
             {
                 Console.Clear();
@@ -68,8 +69,68 @@ namespace TrabGrafos{
                         Console.ReadKey();
                         break;
                     case 4:
-                        Console.WriteLine("Aqui você pode implementar BFS, DFS ou Dijkstra futuramente.");
-                        Console.ReadKey();
+                        do
+                        {
+                            Console.Clear();
+                            Console.WriteLine("-------------------------");
+                            Console.WriteLine("Qual algoritmo executar?");
+                            Console.WriteLine("-------------------------");
+                            Console.WriteLine("1 - DFS - Travessia em profundidade");
+                            Console.WriteLine("2 - BFS - Travessia em amplitude");
+                            Console.WriteLine("3 - Dijkstra");
+                            Console.WriteLine("4 - Prim");
+                            Console.WriteLine("5 - Kruskal");
+                            Console.WriteLine("0 - Sair");
+                            Console.WriteLine("-------------------------");
+                            Console.Write("Escolha uma opção: ");
+                            minorOption = int.Parse(Console.ReadLine());
+
+                            switch (minorOption)
+                            {
+                                case 1:
+                                    Console.Write("Informe o vértice inicial para DFS: ");
+                                    int startDFS = int.Parse(Console.ReadLine());
+                                    GraphAlgorithms.DFS(grafos, startDFS);
+                                    Console.ReadKey();
+                                    break;
+
+                                case 2:
+                                    Console.Write("Informe o vértice inicial para BFS: ");
+                                    int startBFS = int.Parse(Console.ReadLine());
+                                    GraphAlgorithms.BFS(grafos, startBFS);
+                                    Console.ReadKey();
+                                    break;
+
+                                case 3:
+                                    Console.Write("Informe o vértice inicial: ");
+                                    int startDij = int.Parse(Console.ReadLine());
+                                    Console.Write("Informe o vértice destino: ");
+                                    int endDij = int.Parse(Console.ReadLine());
+                                    GraphAlgorithms.Dijkstra(grafos, startDij, endDij);
+                                    Console.ReadKey();
+                                    break;
+
+                                case 4:
+                                    GraphAlgorithms.Prim(grafos);
+                                    Console.ReadKey();
+                                    break;
+
+                                case 5:
+                                    GraphAlgorithms.Kruskal(grafos);
+                                    Console.ReadKey();
+                                    break;
+
+                                case 0:
+                                    Console.WriteLine("Voltando ao menu principal...");
+                                    break;
+
+                                default:
+                                    Console.WriteLine("Opção inválida!");
+                                    Console.ReadKey();
+                                    break;
+                            }
+
+                        } while (minorOption != 0);
                         break;
                     case 0:
                         Console.WriteLine("Encerrando...");

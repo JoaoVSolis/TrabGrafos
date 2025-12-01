@@ -1,0 +1,15 @@
+D:\trabGrafos\TrabGrafos\trabgrafos\bin\Debug\net5.0\TrabGrafos.exe
+D:\trabGrafos\TrabGrafos\trabgrafos\bin\Debug\net5.0\TrabGrafos.deps.json
+D:\trabGrafos\TrabGrafos\trabgrafos\bin\Debug\net5.0\TrabGrafos.runtimeconfig.json
+D:\trabGrafos\TrabGrafos\trabgrafos\bin\Debug\net5.0\TrabGrafos.runtimeconfig.dev.json
+D:\trabGrafos\TrabGrafos\trabgrafos\bin\Debug\net5.0\TrabGrafos.dll
+D:\trabGrafos\TrabGrafos\trabgrafos\bin\Debug\net5.0\TrabGrafos.pdb
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\TrabGrafos.GeneratedMSBuildEditorConfig.editorconfig
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\TrabGrafos.AssemblyInfoInputs.cache
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\TrabGrafos.AssemblyInfo.cs
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\TrabGrafos.csproj.CoreCompileInputs.cache
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\TrabGrafos.dll
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\refint\TrabGrafos.dll
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\TrabGrafos.pdb
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\TrabGrafos.genruntimeconfig.cache
+D:\trabGrafos\TrabGrafos\trabgrafos\obj\Debug\net5.0\ref\TrabGrafos.dll

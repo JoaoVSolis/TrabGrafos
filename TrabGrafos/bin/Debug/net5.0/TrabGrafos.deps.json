@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TrabGrafos/1.0.0": {
+        "runtime": {
+          "TrabGrafos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TrabGrafos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

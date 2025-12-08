@@ -65,7 +65,7 @@ namespace TrabGrafos{
                 Console.WriteLine("1 - Definir Arestas");
                 Console.WriteLine("2 - Remover Aresta");
                 Console.WriteLine("3 - Representar Grafo");
-                Console.WriteLine("4 - Executar Algoritmo (futuro)");
+                Console.WriteLine("4 - Executar Algoritmo");
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("-------------------------");
                 Console.Write("Escolha uma opção: ");
@@ -188,4 +188,5 @@ namespace TrabGrafos{
             } while (option != 0);
         }
     }
+
 }

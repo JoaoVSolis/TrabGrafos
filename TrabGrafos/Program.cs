@@ -47,7 +47,7 @@ namespace TrabGrafos{
                 Console.WriteLine("0 1 7");
                 Console.WriteLine("1 2 5");
                 Console.ReadKey();
-                Console.Clear():
+                Console.Clear();
                 Console.Write("Digite o caminho do arquivo .txt: ");
                 string path = Console.ReadLine();
                 grafos = Graph.LoadFromFile(path);
@@ -191,4 +191,5 @@ namespace TrabGrafos{
     }
 
 }
+
 

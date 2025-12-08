@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 public class Graph{
     private int[,] adjacencyMatrix;
@@ -82,5 +83,24 @@ public List<(int neighbor, int weight)> GetNeighbors(int node){
 public List<Edge> GetEdges(){
     return new List<Edge>(edgeList);
 }
+
+public static Graph LoadFromFile(string filePath)
+    {
+        string[] lines = File.ReadAllLines(filePath);
+        int size = int.Parse(lines[0]);
+        Graph g = new Graph(size);
+        for (int i = 1; i < lines.Length; i++)
+        {
+            string[] parts = lines[i].Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length < 3) continue;
+
+            int src = int.Parse(parts[0]);
+            int dst = int.Parse(parts[1]);
+            int weight = int.Parse(parts[2]);
+
+            g.AddEdge(src, dst, weight);
+        }
+        return g;
+    }
 
 }

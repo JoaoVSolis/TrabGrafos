@@ -5,10 +5,55 @@ using System.Linq;
 namespace TrabGrafos{
     class Program{
         static void Main(string[] args){
+            Graph grafos = null;
+
             Console.Clear();
-            Console.WriteLine("Qual o tamanho do grafo?");
-            int graphSize = int.Parse(Console.ReadLine());
-            Graph grafos = new Graph(graphSize);
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Como deseja carregar o grafo?");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("1 - Digitar manualmente");
+            Console.WriteLine("2 - Ler de arquivo .txt");
+            Console.WriteLine("-------------------------");
+            Console.Write("Escolha uma opção: ");
+            int loadOption = int.Parse(Console.ReadLine());
+
+            if (loadOption == 1)
+            {
+                Console.Write("Qual o tamanho do grafo? ");
+                int graphSize = int.Parse(Console.ReadLine());
+                grafos = new Graph(graphSize);
+                Console.WriteLine("Quantas arestas deseja adicionar?");
+                int qtdArestas = int.Parse(Console.ReadLine());
+                for (int i = 0; i < qtdArestas; i++)
+                {
+                    Console.WriteLine($"Aresta {i + 1}:");
+                    Console.Write("Origem: ");
+                    int src = int.Parse(Console.ReadLine());
+                    Console.Write("Destino: ");
+                    int dst = int.Parse(Console.ReadLine());
+                    Console.Write("Peso: ");
+                    int weight = int.Parse(Console.ReadLine());
+                    grafos.AddEdge(src, dst, weight);
+                }
+            }
+            else if (loadOption == 2)
+            {
+                Console.Clear();
+                Console.WriteLine("O txt deverá seguir o seguinte padrão:");
+                Console.WriteLine("A primeira linha deve ser o numero de vertices");
+                Console.WriteLine("As linhas seguintes dever seguir o padrão: Origem/Destino/Peso");
+                Console.WriteLine("Exemplo");
+                Console.WriteLine("5");
+                Console.WriteLine("0 1 7");
+                Console.WriteLine("1 2 5");
+                Console.ReadKey();
+                Console.Write("Digite o caminho do arquivo .txt: ");
+                string path = Console.ReadLine();
+                grafos = Graph.LoadFromFile(path);
+                Console.WriteLine("Grafo carregado com sucesso!");
+                Console.ReadKey();
+            }
+
             int option = 99;
             int minorOption = 99;
             do
@@ -20,7 +65,7 @@ namespace TrabGrafos{
                 Console.WriteLine("1 - Definir Arestas");
                 Console.WriteLine("2 - Remover Aresta");
                 Console.WriteLine("3 - Representar Grafo");
-                Console.WriteLine("4 - Executar Algoritmo");
+                Console.WriteLine("4 - Executar Algoritmo (futuro)");
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("-------------------------");
                 Console.Write("Escolha uma opção: ");
@@ -143,5 +188,4 @@ namespace TrabGrafos{
             } while (option != 0);
         }
     }
-
 }
